@@ -1,0 +1,17 @@
+[commands]
+reboot = [ "systemctl", "reboot" ]
+poweroff = [ "systemctl", "poweroff" ]
+
+[background]
+path = "/usr/share/pixmaps/0325.jpg"
+fit = "Contain"
+
+[GTK]
+application_prefer_dark_theme = true
+cursor_theme_name = "Adwaita"
+font_name = "PTMono 14"
+icon_theme_name = "Adwaita"
+theme_name = "Adwaita"
+
+[appearance]
+greeting_msg = "Holy cow! What an amazing badger I see before me!"
