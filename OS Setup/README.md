@@ -42,3 +42,21 @@ This depends on your computer. Most systems will lock this feature by default wh
 Once this has been done you can reboot and tap another key e.g. F9 which will show a list of bootable drives and you should see your bootable USB listed.
 
 This is probably the biggest barrier for getting non technical users to start using Linux distros.
+
+### Updating your keboard layout
+
+If like me you are on a Mac(GB) keyboard you may find that where you are used to the control (CMD) key is now a super key. To switch CMD and CTRL you can edit the file at:
+
+```
+/usr/share/X11/xkb/symbols/pc
+```
+
+and switch around the super and control keys (literally just change their names).
+
+Save this and then run:
+
+```sh
+sudo rf -rf /var/lib/xkb/*
+```
+
+Reboot your system and your keys will be swapped.
