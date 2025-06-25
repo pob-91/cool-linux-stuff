@@ -1,0 +1,13 @@
+[window]
+
+opacity = 0.9
+blur = true
+
+[font]
+
+normal = { family = "PT Mono", style = "Regular" }
+size = 12
+
+[cursor]
+
+style = { shape = "Beam" }
