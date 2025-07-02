@@ -4,7 +4,7 @@ This file will go over some common greeters that you can use.
 
 ## Ly
 
-Ly is a good go to console greeter. 
+Ly is a good go to console greeter.
 
 Install: `yay -s ly`
 
@@ -30,6 +30,8 @@ systemctl enable greetd.service
 Move the file `./qtgreet/config.toml` to `/etc/greetd/config.toml`
 
 Move the file `./qtgreet/config.ini` to `/etc/qtgreet/config.ini`. **NOTE** this sets up a background image that needs to be moved to `/usr/share/qtgreet/backgrounds` to work and you need to make this file and the image be owned by the greeter user `chown greeter /usr/share/qtgreet/backgrounds/IMAGE....`
+
+**IMPORTANT** QtGreet works with png or svg images. The jpgs in the wallpaper folder here will not work.
 
 **If using sway** move the file `./qtgreet/sway.cfg` to `/etc/qtgreet/sway.cfg` and make sure the owner is the greeter user like above. If using a different wm then [check out the git repo](https://github.com/marcusbritanicus/QtGreet) for more info on how to set up.
 
