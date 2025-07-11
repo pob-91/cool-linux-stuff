@@ -88,11 +88,15 @@ pacman -S opentofu
 
 ## Kubernetes
 
-There are a few ways to run kubernetes stacks locally, here is an example with minikube:
+There are a few ways to run kubernetes stacks locally, here is an example with kind:
 
 ```bash
-pacman -S minikube
+yay -S kind
 ```
+
+Note that the setup instructions for docker here are with rootless which does make life easier but may cause some issues
+running kubernetes in docker. [See here](https://kind.sigs.k8s.io/docs/user/rootless/) for instructions on how to setup kind
+with rootless docker.
 
 ## Docker
 
