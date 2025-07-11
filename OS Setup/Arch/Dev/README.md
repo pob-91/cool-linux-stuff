@@ -16,6 +16,14 @@ A useful JSON parsing program for the CLI is `jq`.
 
 You can install the `awscli` straight from pacman.
 
+## Golang
+
+This is super easy, just run:
+
+```bash
+pacman -S go
+```
+
 ## Dotnet
 
 You can install the latest dotnet sdk with:
@@ -26,15 +34,27 @@ pacman -S dotnet-sdk aspnet-runtime
 
 ## Node
 
-Arch has the latest nodejs and also the lts versions e.g. iron:
+The best way to install and manage node and npm on any distro is via nvm.
+
+See [here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) for instructions on how to install.
+
+Once installed you can run:
 
 ```bash
-pacman -S nodejs-lts-iron npm
-mkdir ~/.npm-global
-npm set prefix '~/.npm-global'
+nvm install --lts
 ```
 
+This will download the latest lts version of node and set it as the default one.
+
 ## Python
+
+The best way overall to manage python is via `uv`. uv is in the standard arch repo so just run:
+
+```bash
+pacman -S uv
+```
+
+You can then use `pyroject.toml` files to manage python versions and dependencies.
 
 The Arch installation will come with the latest version of python3. You can install older version e.g. 3.9 from the AUR like:
 
@@ -53,10 +73,26 @@ pacman -S python-pip
 This can be installed from the openjdk:
 
 ```bash
-pacman -S jdk17-openjdk maven
+pacman -S jdk21-openjdk maven
 ```
 
 You can install the latest version or many of the lts versions as above.
+
+## OpenTofu
+
+This is an alternative to `terraform` but both are in the arch repo.
+
+```bash
+pacman -S opentofu
+```
+
+## Kubernetes
+
+There are a few ways to run kubernetes stacks locally, here is an example with minikube:
+
+```bash
+pacman -S minikube
+```
 
 ## Docker
 
@@ -101,12 +137,13 @@ Then run `sysctl -l --system`.
 
 Run the following to setup credential storage for docker, remember to get the link to the docker credential helper download:
 
+The link to the latest version can be [found here](https://github.com/docker/docker-credential-helpers/releases).
+
 ```bash
 cd ~/bin
 gpg --full-generate-key
-wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.4/docker-credential-pass-v0.6.4-amd64.tar.gz # replace with latest link
-tar xvzf docker-credential-pass-v0.6.4-amd64.tar.gz
-rm docker-credential-pass-v0.6.4-amd64.tar.gz
+wget {LINK} # replace with latest link
+mv {FILENAME} docker-credential-pass
 chmod a+x docker-credential-pass
 gpg --list-secret-keys # copy the UUID from the output here
 pass init UUID # replace UUID with the value from the last line
