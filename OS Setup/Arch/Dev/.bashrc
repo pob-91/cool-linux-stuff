@@ -12,6 +12,7 @@ alias UPDATE=update_all
 alias open=linux_open
 alias autoremove=arch_autoremove
 alias windowname=get_windowname
+alias sonic=get_fastest_mirrors
 
 PS1='\W >> '
 
@@ -44,6 +45,10 @@ function arch_autoremove() {
 function get_windowname() {
 	echo "Click on the window you want"
 	xprop | grep -i 'class'
+}
+
+function get_fastest_mirrors() {
+	sudo reflector -c "United Kingdom" --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 }
 
 source /usr/share/git/completion/git-completion.bash
