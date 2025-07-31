@@ -5,7 +5,7 @@ echo "Installing basic Wayland packages"
 echo 
 echo
 
-sudo pacman -S qt5-wayland qt6-wayland pipewire wireplumber alsa-utils pipewire-alsa pipewire-pulse pipewire-jack pavucontrol polkit-kde-agent polkit network-manager-applet blueman playerctl wl-clipboard linux-headers xdg-user-dirs xdg-utils bluez bluez-utils bash-completion reflector acpi acpi_call acpid libsecret pass gnome-keyring ttf-font-awesome gvfs nfs-utils xdg-desktop-portal-wlr xdg-desktop-portal xorg-xwayland avahi nss-mdns cups wmname noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+sudo pacman -S qt5-wayland qt6-wayland pipewire wireplumber alsa-utils pipewire-alsa pipewire-pulse pipewire-jack pavucontrol polkit-kde-agent polkit network-manager-applet blueman playerctl wl-clipboard linux-headers xdg-user-dirs xdg-utils bluez bluez-utils bash-completion reflector acpi acpi_call acpid libsecret pass gnome-keyring woff2-font-awesome gvfs nfs-utils xdg-desktop-portal-wlr xdg-desktop-portal xorg-xwayland avahi nss-mdns cups wmname noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
 yay -S ttf-paratype wdisplays
 
