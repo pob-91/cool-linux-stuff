@@ -1,0 +1,114 @@
+[accessibility]
+ui_scale = 1
+
+[bar.default]
+start = ["clock", "weather", "spacer", "workspaces"]
+center = ["active_window"]
+end = ["sysmon_3", "spacer", "audio-vis", "media", "tray", "screenshot", "clipboard", "network", "volume", "session"]
+capsule = true
+
+[shell]
+font_family = "PT Mono"
+telemetry_enabled = false
+setup_wizard_enabled = false
+polkit_agent = true
+settings_show_advanced = true
+
+[shell.greeter_sync]
+auto_sync = true
+
+[shell.panel]
+transparency_mode = "glass"
+session_placement = "floating"
+session_position = "center"
+
+[shell.sesson]
+grid_columns = 3
+actions = []
+
+[[shell.session.actions]]
+action = "command"
+label = "Sleep"
+glyph = "bedtime"
+command = "systemctl suspend"
+countdown_seconds = 3
+variant = "secondary"
+
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 3
+
+[[shell.session.actions]]
+action = "shutdown"
+variant = "destructive"
+countdown_seconds = 3
+
+[theme]
+mode = "light"
+source = "builtin"
+builtin = "Rosé Pine"
+
+[widget.clock]
+format = "{:%H:%M %A %d/%m/%y}"
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.session]
+color = "error"
+
+[widget.sysmon_3]
+glyph = "cpu-2"
+stat = "ram_used"
+type = "sysmon"
+
+[widget.tray]
+capsule = true
+capsule_fill = "on_secondary"
+
+[widget.audio-vis]
+type       = "audio_visualizer"
+width      = 64
+bands      = 20
+centered   = true
+show_when_idle = false
+color_1 = "primary"
+color_2 = "secondary"
+
+[widget.screenshot]
+glyph = "screenshot"
+
+[widget.screenshot.actions]
+left = "screenshot-region"
+
+[widget.taskbar]
+item_spacing = 8
+
+[dock]
+enabled = true
+position = "left"
+icon_size = 32
+auto_hide = true
+reserve_space = false
+show_dots = true
+
+[desktop_widgets]
+enabled = true
+schema_version = 2
+
+[wallpaper]
+directory = "~/Pictures/Wallpapers"
+fill_mode = "fit"
+
+[wallpaper.default]
+path = "~/Pictures/Wallpapers/0325.jpg"
+
+[location]
+auto_locate = true
+
+[nightlight]
+enabled = true
+
+[notification]
+history_retention_hours = 1
