@@ -60,3 +60,10 @@ systemctl enable greetd.service
 ```
 
 Then you will need to copy `./regreet/config.toml`, `./regreet/hyprland.conf` and `./regreet/regreet.toml` to `/etc/greetd/`
+
+## Noctalia
+
+This one works well with the Noctalia desktop but can be used seperately. Also works well with Hyprland.
+
+- Copy the greeter.toml to `/var/lib/noctalia-greeter/greeter.toml`. 
+- Copy the config.toml tp `/etc/greetd/config.toml`.
