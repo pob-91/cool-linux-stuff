@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "none"
+  },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_size": 16,
@@ -15,17 +18,17 @@
     "light": "Solarized Light",
     "dark": "One Dark"
   },
-  "features": {
-    "edit_prediction_provider": "none"
-  },
   "buffer_font_family": "PT Mono",
   "ui_font_family": "PT Mono",
   "agent": {
     "default_profile": "ask",
     "default_model": {
+      "effort": "medium",
+      "enable_thinking": true,
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
-    }
+      "model": "claude-sonnet-5"
+    },
+    "dock": "right"
   },
   "terminal": {
     "detect_venv": {
@@ -35,5 +38,10 @@
     },
     "cursor_shape": "bar",
     "font_family": "PT Mono"
+  },
+  "project_panel": {
+    "dock": "left",
+    "auto_fold_dirs": false,
+    "bold_folder_labels": true
   }
 }
