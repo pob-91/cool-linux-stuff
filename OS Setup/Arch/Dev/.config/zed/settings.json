@@ -43,5 +43,6 @@
     "dock": "left",
     "auto_fold_dirs": false,
     "bold_folder_labels": true
-  }
+  },
+  "extend_comment_on_newline": false,
 }
