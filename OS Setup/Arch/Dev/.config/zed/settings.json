@@ -45,4 +45,13 @@
     "bold_folder_labels": true
   },
   "extend_comment_on_newline": false,
+  "theme_overrides": {
+    "Solarized Light": {
+      "scrollbar.thumb.background": "#A8C0A8",
+      "scrollbar.thumb.hover_background": "#97B497",
+      "scrollbar.thumb.active_background": "#84A284",
+      "scrollbar.track.background": "#FDF6E3",
+      "scrollbar.track.border": "#EEE8D5"
+    }
+  }
 }
