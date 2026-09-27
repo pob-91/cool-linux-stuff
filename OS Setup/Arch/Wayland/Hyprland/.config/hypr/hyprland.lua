@@ -33,6 +33,7 @@ local menu        = "ulauncher-toggle"
 hl.on("hyprland.start", function()
     hl.exec_cmd("noctalia")
     hl.exec_cmd("ulauncher --hide-window 1")
+    hl.exec_cmd("protonmail-bridge --no-window")
 end)
 
 
@@ -117,6 +118,10 @@ hl.config({
 
     animations = {
         enabled = true,
+    },
+
+    cursor = {
+	inactive_timeout = 2,
     },
 })
 
